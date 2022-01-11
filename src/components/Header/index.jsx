@@ -6,7 +6,9 @@ import { Header, Title } from "./styled";
 const Component = () => {
   return (
     <Header>
-      <Title src={'https://rentamelo.s3.us-east-2.amazonaws.com/logo.png'} href={"www.com.com"}/>
+      <a href="/">
+        <Title src={'https://rentamelo.s3.us-east-2.amazonaws.com/logo.png'} href={"www.com.com"}/>
+      </a>
     </Header>
   );
 };
