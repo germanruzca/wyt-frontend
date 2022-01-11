@@ -1,6 +1,6 @@
 import React from "react";
 import { MainBox, Title, StarsContainer } from "./styled.js"
-import { Stars } from '../index'
+import { RatedStars } from '../index'
 
 
 const Compontent = ({value, title, color}) => {
@@ -10,7 +10,7 @@ const Compontent = ({value, title, color}) => {
         {title}
       </Title>
       <StarsContainer>
-        <Stars value={value}/>
+        <RatedStars value={value}/>
       </StarsContainer>
     </MainBox>
   );

@@ -10,4 +10,5 @@ export const Stars = styled.div`
   > svg {
     padding-left: 5px;
   }
-`;
+  
+  `;

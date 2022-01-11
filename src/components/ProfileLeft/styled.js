@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ProfileLeft = styled.div`
   width: 354px;
   height: 144px;
-  background-color: #E2DFDF;
+  background-color: ${(params) => params?.theme?.colors.squares};
   border-radius: 10px;
   display: flex;
 `;

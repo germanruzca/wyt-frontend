@@ -1,7 +1,7 @@
 import { LeftBox, PostsLayout, RigthBox } from "../../../components"
 import { MainLayout } from "../../../components/Layouts"
 
-const Main = () => {
+const Main = ({children}) => {
   return (
     <>
       <MainLayout>

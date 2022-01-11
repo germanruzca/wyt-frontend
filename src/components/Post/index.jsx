@@ -1,6 +1,6 @@
 import React from "react";
 import { Post, MainInfo, NameProfile, IconType,ContentTitle, MainReview, ReviewTitle, ReviewText, UserInfo, ContentReview } from "./styled";
-import { PictureProfile, Stars } from "../index";
+import { PictureProfile, RatedStars } from "../index";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilm } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios' 
@@ -18,7 +18,7 @@ const Component = () => {
         </UserInfo>
         <ContentReview>
           <ContentTitle>Spider-Man: No Way Home</ContentTitle>
-          <Stars value={5}/>
+          <RatedStars value={5}/>
         </ContentReview>
       </MainInfo>
       <MainReview>

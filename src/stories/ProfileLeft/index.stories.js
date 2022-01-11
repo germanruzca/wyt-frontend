@@ -1,8 +1,10 @@
-import { Bio as Component } from "../../components";
+import { ProfileLeft as Component } from "../../components";
+import { TemplateStyled } from "../../utils/index";
 
 export default {
-  title: "Components/Bio",
-  component: Component
+  title: "Components/ProfileLeft",
+  component: Component,
+  decorators: [TemplateStyled],
 }
 
 const Template = args => <Component {...args} />

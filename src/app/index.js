@@ -6,13 +6,10 @@ import { theme } from "../style/theme";
 import GlobalStyle from "../style/Global";
 
 export const App = () => {
-
   return (
-    <>
-      <ThemeProvider theme={theme}>
-          <GlobalStyle/>
-          <Routes />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+        <GlobalStyle/>
+        <Routes />
+    </ThemeProvider>
   );
 };

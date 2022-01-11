@@ -3,7 +3,7 @@ import { Router } from "@reach/router";
 
 import { Public } from "./Public";
 
-const Routes = () => {
+const Routes = ({children}) => {
   return (
     <Router>
       <Public path="/*" />

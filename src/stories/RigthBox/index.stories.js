@@ -1,8 +1,10 @@
 import { RigthBox as Component } from "../../components";
+import { TemplateStyled } from "../../utils/index";
 
 export default {
   title: "Components/RigthBox",
-  component: Component
+  component: Component,
+  decorators: [TemplateStyled],
 }
 
 const Template = args => <Component {...args} />
