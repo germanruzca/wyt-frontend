@@ -10,3 +10,7 @@ export default {
 const Template = args => <Component {...args} />
 
 export const Primary = Template.bind({})
+Primary.args = {
+  label:"Username",
+  "placeholder": "Type your username..."
+}

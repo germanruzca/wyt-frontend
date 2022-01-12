@@ -1,37 +1,50 @@
 import React from "react";
-import { Tags, Title,Type, Circle, Text } from "./styled"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFilm, faMusic, faTv, faBook } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "@reach/router";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilm, faMusic, faTv, faBook } from '@fortawesome/free-solid-svg-icons';
+import { Tags, Title,Type, Circle, Text } from "./styled";
 
+const tags=[
+    {
+      name: "Movies",
+      color: "#D76868",
+      id: 1,
+    },
+    {
+      name: "Books",
+      color: "#E5BE5A",
+      id: 2,
+    },
+    {
+      name: "TV-Shows",
+      color: "#9DC865",
+      id: 3,
+    },
+    {
+      name: "Music",
+      color: "#5AAEDE",
+      id: 4,
+    }
+  ]
+const icons = [faFilm,faBook,faTv,faMusic]
 const Component = () => {
   return (
     <Tags>
       <Title>Tags</Title>
-      <Type>
-        <Circle col={"#5AAEDE"}>
-          <FontAwesomeIcon icon={faFilm}/>
-        </Circle>
-        <Text>Movie</Text>
-      </Type>
-      <Type>
-        <Circle col={"#E5BE5A"}>
-          <FontAwesomeIcon icon={faMusic} />
-        </Circle>
-        <Text>Music</Text>
-      </Type>
-      <Type>
-        <Circle col={"#D76868"}>
-          <FontAwesomeIcon icon={faTv}/>
-        </Circle>
-        <Text>TV-Show</Text>
-      </Type>
-      <Type>
-        <Circle col={"#9DC865"}>
-          <FontAwesomeIcon icon={faBook}/>
-        </Circle>
-        <Text>Book</Text>
-      </Type>
-
+      {
+        tags.map((item) => {
+          return (
+            <Link to={`/type/${item.id}`}>
+              <Type>
+                <Circle col={item.color}>
+                  <FontAwesomeIcon icon={icons[item.id-1]}/>
+                </Circle>
+                <Text>{item.name}</Text>
+              </Type>
+            </Link>
+          );
+        })
+      }
     </Tags>
   );
 };

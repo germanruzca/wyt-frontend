@@ -1,24 +1,25 @@
 import React from "react";
-import { Main, TypeInfo, TypeName, TypeTotalReco, TypeBio, TextBio, RecoTitle,TypeReco, CirclePicture } from "./styled";
-import { PictureProfile, Post } from "../index";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilm, faMusic, faTv, faBook } from '@fortawesome/free-solid-svg-icons'
+import { Main, TypeInfo, TypeName, TypeTotalReco, TypeBio, TextBio, RecoTitle,TypeReco, CirclePicture } from "./styled";
+import { Post } from "../index";
 
-
-const Component = () => {
-  const vlaue = [1,2,3,4,5]
+const tagsMock =[ "#D76868", "#E5BE5A", "#9DC865","#5AAEDE"]
+const icons = [faFilm, faBook, faTv, faMusic]
+const Component = ({type}) => {
+  const { Posts } = type;
   return (
     <Main>
       <TypeInfo>
-        <CirclePicture col={"#9DC865"}>
-          <FontAwesomeIcon icon={faBook}/>
+        <CirclePicture color={tagsMock[type.id-1]}>
+          <FontAwesomeIcon icon={icons[type.id-1]}/>
         </CirclePicture>
-        <TypeName>Music</TypeName>
-        <TypeTotalReco>Recommendations: 14</TypeTotalReco>
+        <TypeName>{type.name}</TypeName>
+        <TypeTotalReco>Recommendations: { Posts!=null ? Posts.length : "Loading"}</TypeTotalReco>
         <TypeBio>
           Bio
           <TextBio>
-            Here you can see all the recommendations about the music!
+            {type.description}
           </TextBio>
         </TypeBio>
       </TypeInfo>
@@ -26,11 +27,11 @@ const Component = () => {
       
       <TypeReco>
       {
-        vlaue.map((item) => {
+        type.Posts ? (type.Posts.map((item) => {
           return (
-              <Post/>
+              <Post post={item}/>
           )
-        })
+        })) : null
       }
       </TypeReco>
     </Main>

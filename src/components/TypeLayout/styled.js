@@ -25,7 +25,7 @@ export const TypeInfo = styled.div`
 
 export const CirclePicture = styled.div`
   border: 5px solid black;
-  background-color: ${props => props.col};
+  background-color: ${props => props.color};
   color: #000;
   height: 200px;
   width: 200px;

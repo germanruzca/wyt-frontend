@@ -2,17 +2,19 @@ import React from "react";
 import { LeftBox, ProfileContainer, BioContainer,RecommendationsContainer } from "./styled";
 import { ProfileLeft, Bio, Recommendations } from "../index";
 
-const Component = ({much}) => {
+const Component = ({user}) => {
+  const { Posts } = user;
+  console.log(user );
   return (
     <LeftBox>
       <ProfileContainer>
-        <ProfileLeft />
+        <ProfileLeft user={user}/>
       </ProfileContainer>
       <BioContainer>
-        <Bio/>
+        <Bio user={user}/>
       </BioContainer>
       <RecommendationsContainer>
-        <Recommendations much={much}/>
+        <Recommendations posts={Posts}/>
       </RecommendationsContainer>
     </LeftBox>
   );

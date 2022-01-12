@@ -5,6 +5,10 @@ const GlobalStyle = createGlobalStyle`
     margin: unset;
     background-color: #E2DFDF;
   }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 export default GlobalStyle;

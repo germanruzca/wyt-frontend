@@ -2,23 +2,24 @@ import React from "react";
 import { ProfileLeft, ImageContainer, InfomationContainer, NameProfile, TotalReco, UsernameProfile } from "./styled"
 import { PictureProfile } from "../index";
 
-const Component = () => {
+const Component = ({user}) => {
+  const { Posts } = user;
   return (
     <ProfileLeft>
       <ImageContainer>
-        <PictureProfile/>
+        <PictureProfile src={user.pictureId}/>
       </ImageContainer>
-
       <InfomationContainer>
         <NameProfile>
-          German Ruiz
+          {user.firstName} {user.lastName}
         </NameProfile>
         <UsernameProfile>
-          @germanruzca
+          @{user.username}
         </UsernameProfile>
-        <TotalReco>
-          Recommendations: 14
-        </TotalReco>
+       { Posts ? <TotalReco>
+            Recommendations: {Posts.length}
+        </TotalReco> : <p>Loading</p>
+        }
       </InfomationContainer>
     </ProfileLeft>
   );

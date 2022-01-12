@@ -1,5 +1,4 @@
 import React from "react";
-import { Redirect, RouteComponentProps } from "@reach/router";
 import { Header, Title } from "./styled";
 
 

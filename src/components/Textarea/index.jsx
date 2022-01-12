@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { TextareaContainer, Textarea, Error, Label } from "./styled";
 
 const Component = (props) => {

@@ -2,15 +2,16 @@ import React from "react";
 import { Main } from "./styled";
 import { Post } from "../index";
 
-
-const Component = () => {
+const Component = ({posts}) => {
   return (
     <Main>
-      <Post/>
-      <Post/>
-      <Post/>
-      <Post/>
-      <Post/>
+      {
+        posts ? (posts.map((post) => {
+          return (
+            <Post post={post}/>
+          );
+        })) : <h1>Loading</h1>
+      }
     </Main>
   );
 };

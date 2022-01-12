@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { Stars, Star } from "./styled.js"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { Stars, Star } from "./styled.js"
 
 const Component = () => {
 
   const [rating, setRating ] = useState(null);
   const [hover, setHover] = useState(null);
-  console.log(rating)
   return (
     <Stars >
       {

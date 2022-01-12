@@ -14,7 +14,7 @@ const Public = ({children}) => {
       <Header/>
       <Router>
         <Main default />
-        <Type path="/type" />
+        <Type path="/type/:id" />
         <User path="/user" />
       </Router>
       <Footer/>

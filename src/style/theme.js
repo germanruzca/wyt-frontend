@@ -36,6 +36,10 @@ export const theme = {
     seconcolor: "#F8C100",
     black000c2: "#000000c2",
     grayd2d2: "#d2d2d2",
+    typeColor1: "#D76868",
+    typeColor2: "#E5BE5A",
+    typeColor3: "#9DC865",
+    typeColor4: "#5AAEDE",
   },
   fonts: {
     primary: "#ffffff",

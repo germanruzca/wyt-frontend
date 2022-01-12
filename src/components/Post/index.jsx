@@ -1,34 +1,36 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilm,faMusic,faBook,faTv } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "@reach/router";
 import { Post, MainInfo, NameProfile, IconType,ContentTitle, MainReview, ReviewTitle, ReviewText, UserInfo, ContentReview } from "./styled";
 import { PictureProfile, RatedStars } from "../index";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFilm } from '@fortawesome/free-solid-svg-icons'
-import axios from 'axios' 
 
-const Component = () => {
+const icons = [faFilm, faBook, faTv, faMusic]
+
+const Component = ({post}) => {
+  const { title, body, rate, mediaTitle, typeId, User} = post;
+  const { firstName, lastName, pictureId} = User
   return (
     <Post>
       <MainInfo>
         <UserInfo>
-          <PictureProfile/>
-          <NameProfile>German Ruiz</NameProfile>
+          <PictureProfile src={pictureId}/>
+          <NameProfile>{firstName} {lastName}</NameProfile>
           <IconType>
-            <FontAwesomeIcon icon={faFilm}/>
+            <Link to={`/type/${typeId}`}>
+              <FontAwesomeIcon icon={icons[typeId-1]}/>
+            </Link>
           </IconType>
         </UserInfo>
         <ContentReview>
-          <ContentTitle>Spider-Man: No Way Home</ContentTitle>
-          <RatedStars value={5}/>
+          <ContentTitle>{mediaTitle}</ContentTitle>
+          <RatedStars value={rate}/>
         </ContentReview>
       </MainInfo>
       <MainReview>
-        <ReviewTitle>I loveeeeeee it!!!!</ReviewTitle>
+        <ReviewTitle>{title}</ReviewTitle>
         <ReviewText>
-          Spiderman No way home is a delightful joy-ride coupled with great acting and a beautiful story that pulls the emotional strings to both the casual or avid viewer of the franchise. The movie is nearly 2 hours 30 mins long and it rarely misses its beat. This is without a doubt the best Spiderman film in the franchise because it explores what it means to be a spiderman. 
-          Spiderman No way home is a delightful joy-ride coupled with great acting and a beautiful story that pulls the emotional strings to both the casual or avid viewer of the franchise. The movie is nearly 2 hours 30 mins long and it rarely misses its beat. This is without a doubt the best Spiderman film in the franchise because it explores what it means to be a spiderman. 
-          Spiderman No way home is a delightful joy-ride coupled with great acting and a beautiful story that pulls the emotional strings to both the casual or avid viewer of the franchise. The movie is nearly 2 hours 30 mins long and it rarely misses its beat. This is without a doubt the best Spiderman film in the franchise because it explores what it means to be a spiderman. 
-          Spiderman No way home is a delightful joy-ride coupled with great acting and a beautiful story that pulls the emotional strings to both the casual or avid viewer of the franchise. The movie is nearly 2 hours 30 mins long and it rarely misses its beat. This is without a doubt the best Spiderman film in the franchise because it explores what it means to be a spiderman. 
-          
+          {body}
         </ReviewText>
       </MainReview>
     </Post>

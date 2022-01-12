@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Stars, Star } from "./styled.js"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { Stars, Star } from "./styled.js"
 
 const Component = ({value}) => {
   return (

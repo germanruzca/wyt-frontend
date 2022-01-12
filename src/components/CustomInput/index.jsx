@@ -1,28 +1,15 @@
 import React from "react";
-import { Container, Input, Label, HelpText, InputContainer, Error } from "./styled";
+import { Container, Input, Label, InputContainer } from "./styled";
 
 const Component = (props) => {
   const {
     label,
-    helpText,
-    onClick,
-    placeholder,
-    disabled = false,
-    readOnly = false,
-    type = "text",
-    icon,
-    iconPosition = "after",
-    error,
-    name,
-    value,
-    showLabel = true,
-    ...rest
+    placeholder
   } = props;
 
-  const renderLabel = showLabel && (
+  const renderLabel =  (
     <Label>
       {label}
-      <HelpText>{helpText}</HelpText>
     </Label>
   );
 
@@ -31,16 +18,9 @@ const Component = (props) => {
       {renderLabel}
       <InputContainer>
       <Input
-          value={value}
-          name={name}
           placeholder={placeholder}
-          disabled={disabled}
-          readOnly={readOnly}
-          type={type}
-          {...rest}
         />
       </InputContainer>
-      {error && <Error>{error}</Error>}
     </Container>
   );
 };

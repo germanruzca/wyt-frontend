@@ -1,7 +1,7 @@
 import { UserLayout, LeftBox, RigthBox } from "../../../components"
 import { MainLayout } from "../../../components/Layouts"
 
-const User = ({children}) => {
+const User = () => {
   return (
     <>
       <MainLayout>
