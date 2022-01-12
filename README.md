@@ -1,20 +1,65 @@
 # Web app of WYT ( What you thinking?).
 
-This repository is part of my WYT.com project, is just an aplication to give recommendations of movies, books, tv-shows and music.
+This repository is part of my WYT.com project, is just an application to give recommendations of movies, books, tv-shows and music.
 
 ## 1: First design.
-These designa were maded in figma: 
+These designs were maded in figma
+> [Look the complete figma project](https://www.figma.com/file/RFkqSGe0b6GzotQu4P72uh/WYT.com?node-id=1%3A913)
 
 Main page:
 <p>
   <img src="rdImg/img1.png"height="180" />
 </p>
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FRFkqSGe0b6GzotQu4P72uh%2FWYT.com%3Fnode-id%3D1%253A913" allowfullscreen></iframe>
-
 Profile:
 <p>
   <img src="rdImg/img2.png" height="180" width="280" />
 </p>
 
-> Updated: 1/5/2022.
+## 2: Technologies
+- ReactJS
+- Storybook
+- styled-components
+- axios
+
+## 3: Requirements
+You also need nodeJS, this project was made on version 16 of node.
+
+## 4: Clonar y ejecutar el proyecto.
+- Clone the repository
+  ```bash
+  clon de git https://github.com/germanruzca/wyt-frontend.git
+  ```
+
+- Install dependencies
+  ```bash
+  npm install
+  ```
+- Run project
+  ```bash
+  npm start
+  ```
+
+## 5: Explaning the project.
+This is the frontend part of a aplication, the backend ([nodeJS/express](https://github.com/germanruzca/wyt-backend)) could be find in this link.
+
+This application will receive the data from the api, the api to get the data needs a accessToken, when you generate the accessToken (login in backend) you need to copy and paste it in -> [here](src/utils/accessToken.js) <-
+
+> I know sounds weird, but this project will updating.
+
+
+You can look for the storyboks with the command:
+```bash
+npm run storybook
+```
+
+## 6: Thoughts
+This application is not finished yet, here some points to do:
+- Storage the access token.
+- Finish the User page.
+- Login form.
+- SignUp form.
+- Errors administration.
+- Publish a new post on the app.
+- Improve the axios tool in the project.
+- So on...
