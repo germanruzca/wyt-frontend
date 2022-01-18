@@ -25,7 +25,7 @@ Profile:
 ## 3: Requirements
 You also need nodeJS, this project was made on version 16 of node.
 
-## 4: Clonar y ejecutar el proyecto.
+## 4: Clone y execute the project.
 - Clone the repository
   ```bash
   clon de git https://github.com/germanruzca/wyt-frontend.git
